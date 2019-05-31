@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
 .App {
   text-align: center;
+  background: #5C258D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  /*padding-top: 150px;*/
+}
+
+.Container {
+  padding-top: 125px;
 }
 
 .App-logo {
@@ -30,4 +41,38 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Header {
+  font-size: 72px;
+  font-family: 'Anton', sans-serif;
+  color: #F7B6FE;
+}
+
+.InputBox {
+  width: 45%;
+  height: 50px;
+  margin-top: 25px;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #CB3DDB;
+}
+
+.SearchButton {
+  margin-top: 40px;
+  height: 50px;
+  width: 100px;
+  border-radius: 25%;
+  background: #24C6DC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #514A9D, #24C6DC);
+  font-size: 22px;
+  color: white;
+}
+
+.SearchButton:hover {
+  background: #7474BF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
