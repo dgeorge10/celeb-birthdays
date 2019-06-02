@@ -15,7 +15,11 @@ class App extends React.Component {
 
 			fetch("/getBirthday?birthday=" + birthdate)
 			.then(results => {
-				results.text().then(data => console.log(data))
+				results.json().then(data => { 
+					for(let i = 0; i < data.length; i++){
+						console.log(data[i])
+					}
+				})
 			})
 		}
 
