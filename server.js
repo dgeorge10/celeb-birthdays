@@ -14,25 +14,25 @@ app.get('/express_backend', (req, res) => {
 
 app.get('/getBirthday' , (req, res) => {
 	let { birthday } = req.query;
-	people = []
+	people = [];
 
 	request("https://celebritybucks.com/tools/birthdays/" + birthday, (err, response, body) => {
 		if (err) { res.send(err); return;}
-		const root = parser.parse(body)
-		let regex = /alt="([\w\s]*)"/g
-		matches = body.match(regex)
+		const root = parser.parse(body);
+		let regex = /alt="([\w\s]*)"/g;
+		matches = body.match(regex);
 		for(let i = 1; i < matches.length; i++){
 			let raw = matches[i]
 			let split = raw.split("=")[1]
 			if(split.includes("Tweet")) { 
-				console.log("twitter button found")		
+				console.log("twitter button found");		
 				continue; 
 			}
-			let name = split.replace(/['"]+/g, '')
-			people.push(name)
+			let name = split.replace(/['"]+/g, '');
+			people.push(name);
 		}
-		console.log(people)
-		res.send(people)
+		console.log(people);
+		res.send(people);
 
 	})
 });

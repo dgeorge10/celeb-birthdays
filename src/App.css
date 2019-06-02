@@ -76,3 +76,11 @@
   background: -webkit-linear-gradient(to bottom, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.TextHeader {
+  height: 50px;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
