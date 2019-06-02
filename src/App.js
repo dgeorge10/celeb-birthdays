@@ -8,7 +8,10 @@ class App extends React.Component {
 	}
 
 	getDate(){
-			let birthdate = document.getElementById("date").value;
+      let month = document.getElementById("month").value;
+      let day = document.getElementById("day").value;
+      let year = "2019";
+			let birthdate = year + "-" + month + "-" + day;
 
 			fetch("/getBirthday?birthday=" + birthdate)
 			.then(results => {
@@ -20,7 +23,6 @@ class App extends React.Component {
       return <div className="App">
           <div className="Container">
             <div className="Header">Celebrity Birthdays</div>
-            { /* <input id="date" className="InputBox" type="text" placeholder="Enter Your Birthday Here (YYYY-MM-DD)"></input> */}
             <div className="TextHeader">Enter Your Birthday</div>
             <div>
               <select className="SelectBox" id="month">
