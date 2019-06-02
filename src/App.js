@@ -23,7 +23,7 @@ class App extends React.Component {
             { /* <input id="date" className="InputBox" type="text" placeholder="Enter Your Birthday Here (YYYY-MM-DD)"></input> */}
             <div className="TextHeader">Enter Your Birthday</div>
             <div>
-              <select id="month">
+              <select className="SelectBox" id="month">
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>
@@ -37,7 +37,7 @@ class App extends React.Component {
                 <option value="11">November</option>
                 <option value="12">December</option>
               </select>
-              <select id="day">
+              <select className="SelectBox" id="day">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

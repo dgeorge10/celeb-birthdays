@@ -60,7 +60,7 @@
 }
 
 .SearchButton {
-  margin-top: 40px;
+  margin-top: 30px;
   height: 50px;
   width: 100px;
   border-radius: 25%;
@@ -80,7 +80,12 @@
 .TextHeader {
   height: 50px;
   font-family: 'Anton', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
   color: white;
+}
+
+.SelectBox {
+  margin-top: 45px;
+  margin-right: 20px;
 }
