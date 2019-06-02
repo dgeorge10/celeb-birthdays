@@ -20,7 +20,7 @@ class App extends React.Component {
       return <div className="App">
           <div className="Container">
             <div className="Header">Celebrity Birthdays</div>
-            <input id="date" className="InputBox" type="text" placeholder="Enter Your Birthday Here (YYYY-MM-DD)"></input>
+            { /* <input id="date" className="InputBox" type="text" placeholder="Enter Your Birthday Here (YYYY-MM-DD)"></input> */}
             <div className="TextHeader">Enter Your Birthday</div>
             <div>
               <select id="month">
