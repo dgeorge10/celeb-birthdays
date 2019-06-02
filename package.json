@@ -1,18 +1,22 @@
 {
   "name": "celebs",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
+    "express": "^4.17.1",
+    "node-html-parser": "^1.1.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "request": "^2.88.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -27,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
