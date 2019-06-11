@@ -8,7 +8,7 @@ const path = require("path")
 // console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '/build')));
 
 
 app.get('*', (req, res) => {
