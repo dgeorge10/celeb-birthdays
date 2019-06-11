@@ -69,6 +69,7 @@
   background: linear-gradient(to bottom, #514A9D, #24C6DC);
   font-size: 22px;
   color: white;
+  margin-bottom: 30px;
 }
 
 .SearchButton:hover {
@@ -88,4 +89,11 @@
 .SelectBox {
   margin-top: 45px;
   margin-right: 20px;
+}
+
+.Names {
+  /*margin-bottom: 20px;*/
+  font-size: 32px;
+  font-family: 'Anton', sans-serif;
+  color: white;
 }

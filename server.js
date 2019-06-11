@@ -24,7 +24,8 @@ app.get('/getBirthday' , (req, res) => {
 		for(let i = 0; i< testing.length; i++){
 			let splitty = testing[i].split("\" alt=")
 			let name = splitty[1].replace(/['"]+/g, '')
-			let person = { [name] : base_url + splitty[0] }
+			// let person = { [name] : base_url + splitty[0] }
+			let person = name;
 			people.push(person)
 		}
 		console.log(people)

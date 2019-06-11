@@ -4,6 +4,11 @@ import './App.css';
 class App extends React.Component {
 	constructor(props){
 		super(props);
+
+    this.state = {
+      celebrities: []
+    };
+
 		this.getDate = this.getDate.bind(this);
 	}
 
@@ -12,18 +17,25 @@ class App extends React.Component {
       let day = document.getElementById("day").value;
       let year = "2019";
 			let birthdate = year + "-" + month + "-" + day;
+      let celebrityArray = [];
 
 			fetch("/getBirthday?birthday=" + birthdate)
 			.then(results => {
 				results.json().then(data => { 
 					for(let i = 0; i < data.length; i++){
-						console.log(data[i])
+            celebrityArray.push(data[i]);
 					}
+          this.setState(state => ({
+            celebrities: celebrityArray
+          }));
+          console.log(this.state.celebrities);
 				})
 			})
 		}
 
   render(){
+      const listItems = this.state.celebrities.map((name) => <div key={ name }>{ name }</div>)
+
       return <div className="App">
           <div className="Container">
             <div className="Header">Celebrity Birthdays</div>
@@ -79,6 +91,9 @@ class App extends React.Component {
             </div>
             <div>
                 <button onClick={this.getDate} className="SearchButton">Search</button>
+            </div>
+            <div className="Names">
+              { listItems }
             </div>
           </div>
       </div>
